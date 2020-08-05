@@ -5,15 +5,44 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>KTU SGPA Calculator</title>
 	<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<section class="intro">
 		<h1>
-			KTU SGPA Calculator
+			KTU Even Sem GPA Calculator
 		</h1>
-		<p>We know the</p>
+		<p>KTU has officially stated that it won't conduct Even Sem Exams (July 2020) for everyone except final years. The marks will be calculated based on previous SGPA's and normalized internals.</p>
+		<!-- <input type="button" class="go-button" value="Go to Calculator"> -->
 	</section>
-	<script src="js/sc"></script>
+	<section class="calculator">
+		<div class="field">
+			<label for="prev-gpa">Previous Semester GPA</label>
+			<input type="number" name="prev-gpa" min="0" max="10"	step=".1" id="">
+		</div>
+		<div class="grid">
+			<div class="field internals">
+				<input type="number" name="prev-gpa" min="0" max="10"	step=".1" id="">
+			</div>
+			<div class="field internals">
+				<input type="number" name="prev-gpa" min="0" max="10"	step=".1" id="">
+			</div>
+			<div class="field internals">
+				<input type="number" name="prev-gpa" min="0" max="10"	step=".1" id="">
+			</div>
+			<div class="field internals">
+				<input type="number" name="prev-gpa" min="0" max="10"	step=".1" id="">
+			</div>
+			<div class="field internals">
+				<input type="number" name="prev-gpa" min="0" max="10"	step=".1" id="">
+			</div>
+			<div class="field internals"></div>
+			<input type="number" name="prev-gpa" min="0" max="10"	step=".1" id="">
+		</div>
+		</div>
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>

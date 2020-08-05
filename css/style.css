@@ -1,3 +1,106 @@
 body {
-  font-family: Roboto;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.666;
+  text-align: center;
+  background-color: #edf2f4;
+  font-size: 1.1em;
+  flex-direction: column;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2b2d42;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #edf2f4;
+  padding: 5%;
+}
+
+.intro {
+  justify-content: center;
+  transition: .5s opacity;
+  margin-bottom: 2em;
+}
+
+input[type="button"] {
+  border: 3px solid #ef233c;
+  border-radius: 10px;
+  color: white;
+  background-color: #ef233c;
+  padding: 1.2em 1.5em;
+  transition: .2s all ease-in-out;
+}
+
+input[type="button"]:hover,
+input[type="button"]:focus {    
+  background-color: rgba(0, 0, 0, 0);
+  border: 3px solid #ef233c;
+  color: #ef233c;
+}
+
+input[type="button"]:focus {
+  transform: scale(1.1);
+  outline: none;
+}
+
+input[type="number"] {
+  background: none;
+  border: 0px solid;
+  border: 2px #ababab solid;
+  border-radius: 10px;
+  text-align: center;
+  font-size: large;
+  padding: .5em;
+  outline: none;
+  box-shadow: none;
+  transition: .3s;
+  width: 80%;
+}
+
+input[type="number"]:focus {
+  border-color: #ef233c;
+}
+
+.expand-row {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.field {
+  display: flex;
+  width: 80%;
+  text-align: center;
+  justify-content: space-between;
+  margin: 20px;
+  flex-basis: 49%;
+  flex-shrink: 0;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+@media only screen and (min-width: 800px) {
+  section {
+    padding: 0 10%;
+  }
+}
+
