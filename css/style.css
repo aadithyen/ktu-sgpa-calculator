@@ -58,7 +58,7 @@ p {
 
 .overlay p {
   padding: 2em;
-  width: 50%;
+  width: 80%;
   font-size: small;
 }
 
@@ -156,5 +156,8 @@ label {
   }
   .internals {
     flex-basis: 300px;
+  }
+  .overlay p {
+    width: 50%;
   }
 }
