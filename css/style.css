@@ -16,10 +16,13 @@ h4,
 h5,
 h6 {
   color: #2b2d42;
+  font-weight: 400;
 }
 
 h1 {
   font-size: 2em;
+  font-weight: 600;
+  color: #ef233c;
 }
 
 section {
@@ -47,10 +50,17 @@ p {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, .9);
+  color: white;
   align-items: center;
   justify-content: center;
   transition: .5s;
   z-index: 10;
+}
+
+.overlay p {
+  padding: 2em;
+  width: 50%;
+  font-size: small;
 }
 
 .hidden {
@@ -60,7 +70,7 @@ p {
 
 .overlay h1 {
   color: white;
-  font-size: 4em;
+  font-size: 3em;
   margin: 0;
 }
 
@@ -143,5 +153,7 @@ label {
   section {
     padding: 0 10%;
   }
+  .overlay h1 {
+    font-size: 4em;
+  }
 }
-

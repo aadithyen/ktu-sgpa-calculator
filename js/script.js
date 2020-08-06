@@ -6,6 +6,7 @@ var paperCount;
 $(document).ready(function () {
   $("#calculate").click(function() {
     prevGpa = $('#prev-gpa').val();
+    var fail = 0;
 
     subjectsMark = $('.internal-input').map(function() {
       return this.value;
@@ -16,22 +17,34 @@ $(document).ready(function () {
     }).get();
 
     paperCount = 0;
-    gp = 0;
-
+    tgp = 0;
     subjectsMark.forEach(subject => {
       if(subject != "") {
         paperCount++;
-        gp += gradeCalc(parseInt(subject), parseInt(prevGpa*10));
+        gp = 0;
+        var gp = gradeCalc(parseInt(subject), parseInt(prevGpa*10));
+        if (gp != 0) {
+          tgp += gp;
+        }
+        else {
+          fail = 1;
+        }
       }
     });
-
     labMark.forEach(lab => {
       if(lab != "") {
         paperCount++;
-        gp += getGradePoint(parseInt(lab))
+        gp = getGradePoint(parseInt(lab)); 
+        if (gp != 0) {
+          tgp += gp;
+        }
+        else {
+          fail = 1;
+        }
+        tgp += gp;
       }
     });
-    printSGPA(gp, paperCount);
+    printSGPA(tgp, paperCount, fail);
     $(".overlay").removeClass("hidden");
   });
 
@@ -55,9 +68,22 @@ function gradeCalc(subInternal, gpa) {
   return getGradePoint(percentage);
 }
 
-function printSGPA(gp, count) {
-  var gpa = gp/count;
-  $(".result").html(gpa.toFixed(2));
+function printSGPA(tgp, count, fail) {
+  if (fail == 0){
+    var gpa = tgp/count;
+    if (!isNaN(gpa)) {
+      $(".result").html(gpa.toFixed(2));
+      $(".tagline").html("SGPA");
+    }
+    else {
+      $(".result").html("Please enter internal marks");
+      $(".tagline").html("");
+    }
+  }
+  else {
+    $(".result").html("Sorry about that");
+    $(".tagline").html("You might have failed in a paper.");
+  }
 }
 
 function getGradePoint(percentage) {
