@@ -14,58 +14,65 @@
 		<h1>
 			KTU Even Sem GPA Calculator
 		</h1>
-		<p>KTU has officially stated that it won't conduct Even Sem Exams (July 2020) for everyone except final years. The
+		<p>KTU has officially stated that it won't conduct Even Sem Exams (July 2020) for lower semesters. The
 			marks will be calculated based on previous SGPA's and normalized internals.</p>
-		<!-- <input type="button" class="go-button" value="Go to Calculator"> -->
 	</section>
 	<section class="calculator">
 		<div class="field">
 			<label for="prev-gpa"><h2>Previous Semester GPA</h2></label>
-			<input type="number" name="prev-gpa" min="0" max="50" step="1" id="">
+			<input type="number" name="prev-gpa" min="0" max="10" step=".1" value = 7.5 id="prev-gpa">
 		</div>
 		<div class="grid">
 			<label for="prev-gpa"><h2>Internals for Subjects</h2></label>
+			<p>Out of 50. You don't have to enter marks of credit-less subjects (Life Skill,PCN etc.)</p>
 			<div class="field internals">
-				<label for="paper-one">Subject One</label>
-				<input type="number" name="paper-one" min="0" max="50" step="1" id="">
+				<label for="subject-one">Subject One</label>
+				<input type="number" name="subject-one" min="0" max="50" step="1" class="internal-input">
 			</div>
 			<div class="field internals">
-				<label for="paper-two">Subject Two</label>
-				<input type="number" name="paper-two" min="0" max="50" step="1" id="">
+				<label for="subject-two">Subject Two</label>
+				<input type="number" name="subject-two" min="0" max="50" step="1" class="internal-input">
 			</div>
 			<div class="field internals">
-				<label for="paper-three">Subject Three</label>
-				<input type="number" name="paper-three" min="0" max="50" step="1" id="">
+				<label for="subject-three">Subject Three</label>
+				<input type="number" name="subject-three" min="0" max="50" step="1" class="internal-input">
 			</div>
 			<div class="field internals">
-				<label for="paper-four">Subject Four</label>
-				<input type="number" name="paper-four" min="0" max="50" step="1" id="">
+				<label for="subject-four">Subject Four</label>
+				<input type="number" name="subject-four" min="0" max="50" step="1" class="internal-input">
 			</div>
 			<div class="field internals">
-				<label for="paper-five">Subject Five</label>
-				<input type="number" name="paper-five" min="0" max="50" step="1" id="">
+				<label for="subject-five">Subject Five</label>
+				<input type="number" name="subject-five" min="0" max="50" step="1" class="internal-input">
 			</div>
 			<div class="field internals">
-				<label for="paper-six">Subject Six</label>
-				<input type="number" name="paper-six" min="0" max="50" step="1" id="">
+				<label for="subject-six">Subject Six</label>
+				<input type="number" name="subject-six" min="0" max="50" step="1" class="internal-input">
 			</div>
 		</div>
 		<div class="grid">
 			<label for="prev-gpa"><h2>Internals for Lab</h2></label>
+			<p>Out of 100</p>
 			<div class="field internals">
-				<label for="paper-one">Subject One</label>
-				<input type="number" name="paper-one" min="0" max="50" step="1" id="">
+				<label for="lab-one">Lab One</label>
+				<input type="number" name="lab-one" min="0" max="50" step="1" class="lab-input">
 			</div>
 			<div class="field internals">
-				<label for="paper-two">Subject Two</label>
-				<input type="number" name="paper-two" min="0" max="50" step="1" id="">
+				<label for="lab-two">Lab Two</label>
+				<input type="number" name="lab-two" min="0" max="50" step="1" class="lab-input">
 			</div>
 			<div class="field internals">
-				<label for="paper-three">Subject Three</label>
-				<input type="number" name="paper-three" min="0" max="50" step="1" id="">
+				<label for="lab-three">Lab Three</label>
+				<input type="number" name="lab-three" min="0" max="50" step="1" class="lab-input">
 			</div>
 			</div>
 		</div>
+		<input type="button" value="Calculate" id="calculate">
+	</section>
+	<section class="overlay hidden">
+		<h1 class="result">6.7</h1>
+		<h2>SGPA</h2>
+		<input type="button" value="Calculate Again" id="recalculate">
 	</section>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
