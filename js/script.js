@@ -41,30 +41,24 @@ $(document).ready(function () {
         else {
           fail = 1;
         }
-        tgp += gp;
       }
     });
     printSGPA(tgp, paperCount, fail);
     $(".overlay").removeClass("hidden");
   });
-
   $("#recalculate").click(function() {
     $(".overlay").addClass("hidden");
   });
-
 });
 
 
 function gradeCalc(subInternal, gpa) {
   var examMark = (Math.round(gpa-2.5)) + 5;
-  console.log(examMark);
   var maxInternal = (examMark/100)*1.25;
   if(subInternal/50 > (maxInternal)) {
     subInternal = maxInternal;
   }
-  console.log(subInternal);
   var percentage = ((examMark + subInternal)/150*100);
-  console.log(percentage);
   return getGradePoint(percentage);
 }
 
