@@ -22,7 +22,6 @@ h6 {
 h1 {
   font-size: 2em;
   font-weight: 600;
-  color: #ef233c;
 }
 
 section {
@@ -139,14 +138,13 @@ label {
   width: 80%;
   text-align: center;
   justify-content: space-between;
-  margin: 20px;
+  margin: 10px;
   align-items: center;
   flex-direction: column;
 }
 
 .internals {
-  flex-basis: 200px;
-  flex-shrink: 0;
+  flex-basis: 170px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -155,5 +153,8 @@ label {
   }
   .overlay h1 {
     font-size: 4em;
+  }
+  .internals {
+    flex-basis: 300px;
   }
 }
