@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,42 +8,68 @@
 	<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 	<section class="intro">
 		<h1>
 			KTU Even Sem GPA Calculator
 		</h1>
-		<p>KTU has officially stated that it won't conduct Even Sem Exams (July 2020) for everyone except final years. The marks will be calculated based on previous SGPA's and normalized internals.</p>
+		<p>KTU has officially stated that it won't conduct Even Sem Exams (July 2020) for everyone except final years. The
+			marks will be calculated based on previous SGPA's and normalized internals.</p>
 		<!-- <input type="button" class="go-button" value="Go to Calculator"> -->
 	</section>
 	<section class="calculator">
 		<div class="field">
-			<label for="prev-gpa">Previous Semester GPA</label>
-			<input type="number" name="prev-gpa" min="0" max="10"	step=".1" id="">
+			<label for="prev-gpa"><h2>Previous Semester GPA</h2></label>
+			<input type="number" name="prev-gpa" min="0" max="50" step="1" id="">
 		</div>
 		<div class="grid">
+			<label for="prev-gpa"><h2>Internals for Subjects</h2></label>
 			<div class="field internals">
-				<input type="number" name="prev-gpa" min="0" max="10"	step=".1" id="">
+				<label for="paper-one">Subject One</label>
+				<input type="number" name="paper-one" min="0" max="50" step="1" id="">
 			</div>
 			<div class="field internals">
-				<input type="number" name="prev-gpa" min="0" max="10"	step=".1" id="">
+				<label for="paper-two">Subject Two</label>
+				<input type="number" name="paper-two" min="0" max="50" step="1" id="">
 			</div>
 			<div class="field internals">
-				<input type="number" name="prev-gpa" min="0" max="10"	step=".1" id="">
+				<label for="paper-three">Subject Three</label>
+				<input type="number" name="paper-three" min="0" max="50" step="1" id="">
 			</div>
 			<div class="field internals">
-				<input type="number" name="prev-gpa" min="0" max="10"	step=".1" id="">
+				<label for="paper-four">Subject Four</label>
+				<input type="number" name="paper-four" min="0" max="50" step="1" id="">
 			</div>
 			<div class="field internals">
-				<input type="number" name="prev-gpa" min="0" max="10"	step=".1" id="">
+				<label for="paper-five">Subject Five</label>
+				<input type="number" name="paper-five" min="0" max="50" step="1" id="">
 			</div>
-			<div class="field internals"></div>
-			<input type="number" name="prev-gpa" min="0" max="10"	step=".1" id="">
+			<div class="field internals">
+				<label for="paper-six">Subject Six</label>
+				<input type="number" name="paper-six" min="0" max="50" step="1" id="">
+			</div>
 		</div>
+		<div class="grid">
+			<label for="prev-gpa"><h2>Internals for Lab</h2></label>
+			<div class="field internals">
+				<label for="paper-one">Subject One</label>
+				<input type="number" name="paper-one" min="0" max="50" step="1" id="">
+			</div>
+			<div class="field internals">
+				<label for="paper-two">Subject Two</label>
+				<input type="number" name="paper-two" min="0" max="50" step="1" id="">
+			</div>
+			<div class="field internals">
+				<label for="paper-three">Subject Three</label>
+				<input type="number" name="paper-three" min="0" max="50" step="1" id="">
+			</div>
+			</div>
 		</div>
 	</section>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
+
 </html>

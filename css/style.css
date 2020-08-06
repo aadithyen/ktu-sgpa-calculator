@@ -75,10 +75,14 @@ input[type="number"]:focus {
 
 }
 
+label {
+  width: 100%;
+}
+
 .grid {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 100%;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -90,13 +94,14 @@ input[type="number"]:focus {
   text-align: center;
   justify-content: space-between;
   margin: 20px;
-  flex-basis: 49%;
-  flex-shrink: 0;
   align-items: center;
   flex-direction: column;
 }
 
-
+.internals {
+  flex-basis: 200px;
+  flex-shrink: 0;
+}
 
 @media only screen and (min-width: 800px) {
   section {
