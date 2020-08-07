@@ -121,6 +121,7 @@ input[type="button"]:focus {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  user-select: none;
   margin: 0.4em 1em;
 }
 
