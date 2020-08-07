@@ -36,8 +36,7 @@ section {
 }
 
 p {
-  width: 100%;
-  margin: 0;
+  padding: 0em 2em;
 }
 
 .intro {
@@ -163,6 +162,7 @@ input[type="button"]:focus {
   display: flex;
   align-items:center;
   border-radius: 10px;
+  width: 170px;
 }
 
 #prev-gpa {
@@ -192,8 +192,13 @@ input[type="button"]:focus {
   transition: .4s;
 }
 
+.internals label {
+  font-size: .8em;
+}
+
 .input-group input {
-  width: 100px;
+  flex-basis: 70px;
+  flex-grow: 2;
   text-align: center;
   border-left: 1px #aaa solid;
   border-radius: 0px 10px 10px 0px;
@@ -242,7 +247,7 @@ label {
 }
 
 .internals {
-  flex-basis: 170px;
+  flex-basis: 150px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -254,6 +259,9 @@ label {
   }
   .internals {
     flex-basis: 300px;
+  }
+  .input-group {
+    width: 250px;
   }
   .overlay p {
     width: 50%;

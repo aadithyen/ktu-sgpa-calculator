@@ -5,8 +5,9 @@ var subjectGrade;
 var moreButton = $("#more-button");
 var calculateButton = $("#calculate");
 var backButton = $("#recalculate");
+var helpButton = $("#help-button");
 
-$(document).ready(function () {
+$(document).ready(function() {
   calculateButton.click(function() {
     prevGpa = $('#prev-gpa').val();
     var fail = 0;
@@ -72,6 +73,11 @@ $(document).ready(function () {
     });
     moreButton.html()=="More..." ? moreButton.html("Less...") : moreButton.html("More...");
   });
+  helpButton.click(function() {
+    $(".result").html("No problem.");
+    $(".tagline").html("Calculate your CGPA considering failed papers to have a grade of P (4 GP)");
+    $(".overlay").removeClass("hidden");
+  })
 });
 
 

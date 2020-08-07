@@ -22,7 +22,8 @@
 			<label for="prev-gpa">
 				<h2>CGPA</h2>
 			</label>
-			<input type="number" name="prev-gpa" min="0" max="10" step=".1" value=7.5 id="prev-gpa">
+			<input type="number" name="prev-gpa" min="0" max="10" step=".1" value=6 id="prev-gpa">
+			<span id="more"><label for="More Fields" id="help-button" tabindex="0">What if I have failed papers?...</label></span>
 			<div class="scheme-selector">
 				<label><input type="radio" name="scheme" id="scheme" value="2019" checked><span>2019 Scheme</span></label>
 				<label><input type="radio" name="scheme" id="scheme" value="2015"><span>2015 Scheme</span></label>
@@ -32,7 +33,7 @@
 			<label for="prev-gpa">
 				<h2>Internals for Theory Subjects</h2>
 			</label>
-			<p>Credit and Internal Mark for each subject. Ignore credit-less papers.</p>
+			<p>Credit and Internal Mark (Out of 50) for each subject. Ignore credit-less papers.</p>
 			<div class="field internals">
 				<label for="subject-one">Subject One</label>
 				<span class="input-group theory-group">
@@ -151,7 +152,7 @@
 			<label for="prev-gpa">
 				<h2>Internals for Lab</h2>
 			</label>
-			<p>Out of 100</p>
+			<p>Credit and Internal (Out of 100) for Labs.</p>
 			<div class="field internals">
 				<label for="lab-one">Lab One</label>
 				<span class="input-group lab-group">
