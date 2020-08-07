@@ -266,4 +266,7 @@ label {
   .overlay p {
     width: 50%;
   }
+  p {
+    width: 100%;
+  }
 }
