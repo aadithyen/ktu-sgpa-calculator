@@ -12,59 +12,154 @@
 <body>
 	<section class="intro">
 		<h1>
-			KTU Even Sem GPA Calculator
+			KTU SGPA Calculator
 		</h1>
 		<p>KTU has officially stated that it won't conduct Even Sem Exams (July 2020) for lower semesters. The
 			marks will be calculated based on previous SGPA's and normalized internals.</p>
 	</section>
 	<section class="calculator">
 		<div class="field">
-			<label for="prev-gpa"><h2>Previous Semester GPA</h2></label>
-			<input type="number" name="prev-gpa" min="0" max="10" step=".1" value = 7.5 id="prev-gpa">
+			<label for="prev-gpa">
+				<h2>CGPA</h2>
+			</label>
+			<input type="number" name="prev-gpa" min="0" max="10" step=".1" value=7.5 id="prev-gpa">
 		</div>
 		<div class="grid">
-			<label for="prev-gpa"><h2>Internals for Subjects</h2></label>
-			<p>Out of 50. You don't have to enter marks of credit-less subjects (Life Skill,PCN etc.)</p>
+			<label for="prev-gpa">
+				<h2>Internals for Theory Subjects</h2>
+			</label>
+			<p>Credit and Internal Mark for each subject. Ignore credit-less papers.</p>
 			<div class="field internals">
 				<label for="subject-one">Subject One</label>
-				<input type="number" name="subject-one" min="0" max="50" step="1" class="internal-input">
+				<span class="input-group theory-group">
+					<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option selected>4</option>
+						<option>5</option>
+						<option>6</option>
+					</select>
+					<input type="number" name="subject-one" min="0" max="50" step="1" class="subject-input">
+				</span>
 			</div>
 			<div class="field internals">
 				<label for="subject-two">Subject Two</label>
-				<input type="number" name="subject-two" min="0" max="50" step="1" class="internal-input">
+				<span class="input-group theory-group">
+					<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option selected>4</option>
+						<option>5</option>
+						<option>6</option>
+					</select>
+					<input type="number" name="subject-two" min="0" max="50" step="1" class="subject-input">
+				</span>
 			</div>
 			<div class="field internals">
 				<label for="subject-three">Subject Three</label>
-				<input type="number" name="subject-three" min="0" max="50" step="1" class="internal-input">
+				<span class="input-group theory-group">
+					<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option selected>4</option>
+						<option>5</option>
+						<option>6</option>
+					</select>
+					<input type="number" name="subject-three" min="0" max="50" step="1" class="subject-input">
+				</span>
 			</div>
 			<div class="field internals">
 				<label for="subject-four">Subject Four</label>
-				<input type="number" name="subject-four" min="0" max="50" step="1" class="internal-input">
+				<span class="input-group theory-group">
+					<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option selected>4</option>
+						<option>5</option>
+						<option>6</option>
+					</select>
+					<input type="number" name="subject-four" min="0" max="50" step="1" class="subject-input">
+				</span>
 			</div>
 			<div class="field internals">
 				<label for="subject-five">Subject Five</label>
-				<input type="number" name="subject-five" min="0" max="50" step="1" class="internal-input">
+				<span class="input-group theory-group">
+					<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option selected>4</option>
+						<option>5</option>
+						<option>6</option>
+					</select>
+					<input type="number" name="subject-five" min="0" max="50" step="1" class="subject-input">
+				</span>
 			</div>
 			<div class="field internals">
 				<label for="subject-six">Subject Six</label>
-				<input type="number" name="subject-six" min="0" max="50" step="1" class="internal-input">
+				<span class="input-group theory-group">
+					<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option selected>4</option>
+						<option>5</option>
+						<option>6</option>
+					</select>
+					<input type="number" name="subject-six" min="0" max="50" step="1" class="subject-input">
+				</span>
 			</div>
 		</div>
 		<div class="grid">
-			<label for="prev-gpa"><h2>Internals for Lab</h2></label>
+			<label for="prev-gpa">
+				<h2>Internals for Lab</h2>
+			</label>
 			<p>Out of 100</p>
 			<div class="field internals">
 				<label for="lab-one">Lab One</label>
-				<input type="number" name="lab-one" min="0" max="50" step="1" class="lab-input">
+				<span class="input-group lab-group">
+					<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+					</select>
+					<input type="number" name="lab-one" min="0" max="50" step="1" class="lab-input">
+				</span>
 			</div>
 			<div class="field internals">
 				<label for="lab-two">Lab Two</label>
-				<input type="number" name="lab-two" min="0" max="50" step="1" class="lab-input">
+				<span class="input-group lab-group">
+					<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+					</select>
+					<input type="number" name="lab-two" min="0" max="50" step="1" class="lab-input">
+				</span>
 			</div>
 			<div class="field internals">
 				<label for="lab-three">Lab Three</label>
-				<input type="number" name="lab-three" min="0" max="50" step="1" class="lab-input">
-			</div>
+				<span class="input-group lab-group">
+					<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+					</select>
+					<input type="number" name="lab-three" min="0" max="50" step="1" class="lab-input">
+				</span>
 			</div>
 		</div>
 		<input type="button" value="Calculate" id="calculate">
@@ -73,10 +168,12 @@
 		<h1 class="result">6.7</h1>
 		<h2 class="tagline">SGPA</h2>
 		<input type="button" value="Calculate Again" id="recalculate">
-		<p>Disclaimer : I have no affiliation with KTU and the SGPA shown here is based on the method of calculation that I inferred from KTU's official statement and may be different from the actual GPA you'll recieve.</p>
+		<p>Disclaimer : I have no affiliation with KTU and the SGPA shown here is based on the method of calculation that I
+			inferred from KTU's official statement and may be different from the actual GPA you'll recieve.</p>
 	</section>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
+
 </html>

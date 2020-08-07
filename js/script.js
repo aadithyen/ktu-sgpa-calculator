@@ -1,49 +1,58 @@
 var prevGpa;
-var subjectsMark;
+var theoryMarks;
+var labMarks;
 var subjectGrade;
-var paperCount;
 
 $(document).ready(function () {
   $("#calculate").click(function() {
     prevGpa = $('#prev-gpa').val();
     var fail = 0;
 
-    subjectsMark = $('.internal-input').map(function() {
-      return this.value;
+    theoryMarks = $('.theory-group').map(function() {
+      return {
+        internal: $(this).children().eq(1).val(),
+        credit: $(this).children().eq(0).val()
+      };
     }).get();
 
-    labMark = $('.lab-input').map(function() {
-      return this.value;
+    labMarks = $('.lab-group').map(function() {
+      return {
+        internal: $(this).children().eq(1).val(),
+        credit: $(this).children().eq(0).val()
+      }
     }).get();
 
-    paperCount = 0;
-    tgp = 0;
-    subjectsMark.forEach(subject => {
-      if(subject != "") {
-        paperCount++;
-        gp = 0;
-        var gp = gradeCalc(parseInt(subject), parseInt(prevGpa*10));
+    var totalCredits = 0;
+    wgp = 0;
+    fail = 0;
+
+    theoryMarks.forEach(paper => {
+      if(paper.internal != "") {
+        credit = parseInt(paper.credit);
+        totalCredits += credit;
+        var gp = gradeCalc(parseInt(paper.internal), parseInt(prevGpa*10));
         if (gp != 0) {
-          tgp += gp;
+          wgp += (gp*credit);
         }
         else {
           fail = 1;
         }
       }
     });
-    labMark.forEach(lab => {
-      if(lab != "") {
-        paperCount++;
-        gp = getGradePoint(parseInt(lab)); 
+    labMarks.forEach(lab => {
+      if(lab.internal != "") {
+        credit = parseInt(lab.credit);
+        totalCredits += credit;
+        gp = getGradePoint(lab.internal); 
         if (gp != 0) {
-          tgp += gp;
+          wgp += (gp*credit);
         }
         else {
           fail = 1;
         }
       }
     });
-    printSGPA(tgp, paperCount, fail);
+    printSGPA(wgp, totalCredits, fail);
     $(".overlay").removeClass("hidden");
   });
   $("#recalculate").click(function() {
@@ -62,9 +71,10 @@ function gradeCalc(subInternal, gpa) {
   return getGradePoint(percentage);
 }
 
-function printSGPA(tgp, count, fail) {
+function printSGPA(wgp, totalCredits, fail) {
   if (fail == 0){
-    var gpa = tgp/count;
+    console.log(wgp);
+    var gpa = wgp/totalCredits;
     if (!isNaN(gpa)) {
       $(".result").html(gpa.toFixed(2));
       $(".tagline").html("SGPA");

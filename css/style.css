@@ -102,22 +102,54 @@ input[type="button"]:focus {
   outline: none;
 }
 
-input[type="number"] {
-  background: none;
-  border: 0px solid;
-  border: 2px #ababab solid;
+.input-group {
+  background: white;
+  display: flex;
+  align-items:center;
   border-radius: 10px;
-  text-align: center;
-  font-size: large;
-  padding: .5em;
-  outline: none;
-  box-shadow: none;
-  transition: .3s;
-  width: 80%;
 }
 
-input[type="number"]:focus {
-  border-color: #ef233c;
+#prev-gpa {
+  font-family: inherit;
+  font-size: 1.1em;
+  text-align: center;
+  background: #fff;
+  height: 30px;
+  padding: .4em 1.2em;
+  width: 100px;
+  border-radius: 10px;
+  border: 2px transparent solid;
+  transition: .4s;
+}
+
+.input-group input, .input-group select {
+  margin:0;
+  -webkit-appearance: menulist-button;
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0;
+  border: none;
+  background: none;
+  height: 30px;
+  padding: .2em 1em;
+  border: 2px transparent solid;
+  transition: .4s;
+}
+
+.input-group input {
+  width: 100px;
+  text-align: center;
+  border-left: 1px #aaa solid;
+  border-radius: 0px 10px 10px 0px;
+}
+.input-group select {
+  height: 40px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+input:focus, select:focus, #prev-gpa:focus {
+  outline:none;
+  border: 2px #ef233c solid;
 }
 
 label {
