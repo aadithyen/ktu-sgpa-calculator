@@ -7,7 +7,7 @@ $(document).ready(function () {
   $("#calculate").click(function() {
     prevGpa = $('#prev-gpa').val();
     var fail = 0;
-
+    var scheme = $('#scheme:checked').val();
     theoryMarks = $('.theory-group').map(function() {
       return {
         internal: $(this).children().eq(1).val(),
@@ -30,7 +30,7 @@ $(document).ready(function () {
       if(paper.internal != "") {
         credit = parseInt(paper.credit);
         totalCredits += credit;
-        var gp = gradeCalc(parseInt(paper.internal), parseInt(prevGpa*10));
+        var gp = gradeCalc(parseInt(paper.internal), parseInt(prevGpa*10), scheme);
         if (gp != 0) {
           wgp += (gp*credit);
         }
@@ -61,14 +61,25 @@ $(document).ready(function () {
 });
 
 
-function gradeCalc(subInternal, gpa) {
-  var examMark = (Math.round(gpa-2.5)) + 5;
+function gradeCalc(subInternal, gpa, scheme) { //Moderation
+  var examMark = moderation(gpa, scheme);
   var maxInternal = (examMark/100)*1.25;
   if(subInternal/50 > (maxInternal)) {
     subInternal = maxInternal;
   }
   var percentage = ((examMark + subInternal)/150*100);
   return getGradePoint(percentage);
+}
+
+function moderation(gpa, scheme) {
+  if (scheme == 2019) {
+    var examMark = (Math.round(gpa-2.5));
+  }
+  else if (scheme == 2015) {
+    var examMark = (Math.round(gpa-3.75));
+  }
+  examMark += 5;
+  return examMark;
 }
 
 function printSGPA(wgp, totalCredits, fail) {

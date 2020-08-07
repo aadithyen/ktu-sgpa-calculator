@@ -29,7 +29,6 @@ section {
   flex-direction: column;
   align-items: center;
   background-color: #edf2f4;
-  padding: 1%;
 }
 
 p {
@@ -85,7 +84,8 @@ input[type="button"] {
   border-radius: 10px;
   color: white;
   background-color: #ef233c;
-  padding: 1.2em 1.5em;
+  padding: .8em 1.5em;
+  margin: 1em;
   font-size: 1em;
   transition: .2s all ease-in-out;
 }
@@ -100,6 +100,53 @@ input[type="button"]:focus {
 input[type="button"]:focus {
   transform: scale(1.1);
   outline: none;
+}
+
+.scheme-selector {
+  display: flex;
+  flex-direction: row;
+  margin: 1.2em 0em 0em;
+}
+
+.scheme-selector label {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin: 0.4em 1em;
+}
+
+.scheme-selector input {
+  display: none;
+}
+
+.scheme-selector input:checked + span {
+  background-color: #d6d6e5;
+}
+.scheme-selector input:checked + span:before {
+  box-shadow: inset 0 0 0 0.4375em #ef233c;
+}
+.scheme-selector span {
+  display: flex;
+  align-items: center;
+  padding: 0.375em 0.75em 0.375em 0.375em;
+  border-radius: 99em;
+  transition: 0.25s ease;
+}
+.scheme-selector span:hover {
+  background-color: #d6d6e5;
+}
+.scheme-selector span:before {
+  display: flex;
+  flex-shrink: 0;
+  content: "";
+  background-color: #fff;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  margin-right: 0.375em;
+  transition: 0.25s ease;
+  box-shadow: inset 0 0 0 0.125em #00005c;
 }
 
 .input-group {

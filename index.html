@@ -23,6 +23,10 @@
 				<h2>CGPA</h2>
 			</label>
 			<input type="number" name="prev-gpa" min="0" max="10" step=".1" value=7.5 id="prev-gpa">
+			<div class="scheme-selector">
+				<label><input type="radio" name="scheme" id="scheme" value="2019" checked><span>2019 Scheme</span></label>
+				<label><input type="radio" name="scheme" id="scheme" value="2015"><span>2015 Scheme</span></label>
+			</div>
 		</div>
 		<div class="grid">
 			<label for="prev-gpa">
@@ -167,7 +171,7 @@
 	<section class="overlay hidden">
 		<h1 class="result">6.7</h1>
 		<h2 class="tagline">SGPA</h2>
-		<input type="button" value="Calculate Again" id="recalculate">
+		<input type="button" value="Go Back" id="recalculate">
 		<p>Disclaimer : I have no affiliation with KTU and the SGPA shown here is based on the method of calculation that I
 			inferred from KTU's official statement and may be different from the actual GPA you'll recieve.</p>
 	</section>
