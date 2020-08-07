@@ -2,9 +2,12 @@ var prevGpa;
 var theoryMarks;
 var labMarks;
 var subjectGrade;
+var moreButton = $("#more-button");
+var calculateButton = $("#calculate");
+var backButton = $("#recalculate");
 
 $(document).ready(function () {
-  $("#calculate").click(function() {
+  calculateButton.click(function() {
     prevGpa = $('#prev-gpa').val();
     var fail = 0;
     var scheme = $('#scheme:checked').val();
@@ -55,8 +58,19 @@ $(document).ready(function () {
     printSGPA(wgp, totalCredits, fail);
     $(".overlay").removeClass("hidden");
   });
-  $("#recalculate").click(function() {
+  backButton.click(function() {
     $(".overlay").addClass("hidden");
+  });
+  moreButton.click(function (){
+    var extraFields = $(".no-display");
+    extraFields.slideToggle({
+      start: function () {
+        $(this).css({
+          display: "flex"
+        })
+      }
+    });
+    moreButton.html()=="More..." ? moreButton.html("Less...") : moreButton.html("More...");
   });
 });
 

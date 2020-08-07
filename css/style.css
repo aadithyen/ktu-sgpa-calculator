@@ -24,6 +24,10 @@ h1 {
   font-weight: 600;
 }
 
+h2 {
+  margin: 0 0 .3em;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -52,7 +56,7 @@ p {
   align-items: center;
   justify-content: center;
   transition: .5s;
-  z-index: 10;
+  z-index: 20;
 }
 
 .overlay p {
@@ -64,6 +68,10 @@ p {
 .hidden {
   opacity: 0;
   z-index: -2;
+}
+
+div .no-display {
+  display: none;
 }
 
 .overlay h1 {
@@ -210,6 +218,16 @@ label {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 10px;
+}
+
+#more {
+  color: #ef233c;
+  width: 100%;
+}
+
+#more label {
+  cursor: pointer;
 }
 
 .field {
