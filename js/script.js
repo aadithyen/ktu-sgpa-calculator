@@ -129,19 +129,19 @@ function getGradePoint(percentage) {
     return 9;
   }
   else if (percentage >= 80) {
-    return 8;
+    return 8.5;
   }
   else if (percentage >= 70) {
-    return 7;
+    return 8;
   }
   else if (percentage >= 60) {
-    return 6;
+    return 7;
   }
   else if (percentage >= 50) {
-    return 5;
+    return 6;
   }
   else if (percentage >= 45) {
-    return 4;
+    return 5;
   }
   else return 0;
 } 
