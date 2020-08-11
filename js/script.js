@@ -83,8 +83,9 @@ $(document).ready(function() {
 
 function gradeCalc(subInternal, gpa, scheme) { //Moderation
   var examMark = moderation(gpa, scheme);
-  var maxInternal = (examMark/100)*1.25;
-  if(subInternal/50 > (maxInternal)) {
+  var maxInternal = Math.round(examMark + (examMark/100)*1.25);
+  console.log(maxInternal);
+  if(subInternal > (maxInternal)) {
     subInternal = maxInternal;
   }
   var percentage = ((examMark + subInternal)/150*100);
@@ -104,7 +105,6 @@ function moderation(gpa, scheme) {
 
 function printSGPA(wgp, totalCredits, fail) {
   if (fail == 0){
-    console.log(wgp);
     var gpa = wgp/totalCredits;
     if (!isNaN(gpa)) {
       $(".result").html(gpa.toFixed(2));
