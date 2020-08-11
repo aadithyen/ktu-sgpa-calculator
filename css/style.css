@@ -93,6 +93,7 @@ input[type="button"] {
   background-color: #ef233c;
   padding: .8em 1.5em;
   margin: 1em;
+  cursor: pointer;
   font-size: 1em;
   transition: .2s all ease-in-out;
 }

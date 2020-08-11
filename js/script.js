@@ -75,7 +75,7 @@ $(document).ready(function() {
   });
   helpButton.click(function() {
     $(".result").html("No problem.");
-    $(".tagline").html("Calculate your CGPA considering failed papers to have a grade of P (4 GP)");
+    $(".tagline").html("Calculate your CGPA considering failed papers to have a grade of P (5 GP)");
     $(".overlay").removeClass("hidden");
   })
 });
